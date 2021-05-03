@@ -10,7 +10,7 @@ const store = new session.MemoryStore();
 
 // const room = require("./routes/room")
 
-const PORT = 3000 || process.env.PORT;
+const PORT = process.env.PORT || 3000;
 
 let rooms = [[]]
 let rooms_inter = []
