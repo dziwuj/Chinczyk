@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cing Ciang Ciong</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script defer type="module" src="./js/main.js"></script>
+</head>
+
+<body>
+    <div class="game_container">
+        <div id="board_container">
+            <img src="./gfx/board.png" alt="">
+            <div id="R">
+                <div id="R1" class="home">
+                    <img src="./gfx/red_light.png" alt="" style="display: none;">
+                    <img src="./gfx/red_dark.png" alt="" style="display: none;">
+                </div>
+                <div id="R2" class="home">
+                    <img src="./gfx/red_light.png" alt="" style="display: none;">
+                    <img src="./gfx/red_dark.png" alt="" style="display: none;">
+                </div>
+                <div id="R3" class="home">
+                    <img src="./gfx/red_light.png" alt="" style="display: none;">
+                    <img src="./gfx/red_dark.png" alt="" style="display: none;">
+                </div>
+                <div id="R4" class="home">
+                    <img src="./gfx/red_light.png" alt="" style="display: none;">
+                    <img src="./gfx/red_dark.png" alt="" style="display: none;">
+                </div>
+            </div>
+
+
+            <div id="B">
+                <div id="B1" class="home">
+                    <img src="./gfx/blue_light.png" alt="" style="display: none;">
+                    <img src="./gfx/blue_dark.png" alt="" style="display: none;">
+                </div>
+                <div id="B2" class="home">
+                    <img src="./gfx/blue_light.png" alt="" style="display: none;">
+                    <img src="./gfx/blue_dark.png" alt="" style="display: none;">
+                </div>
+                <div id="B3" class="home">
+                    <img src="./gfx/blue_light.png" alt="" style="display: none;">
+                    <img src="./gfx/blue_dark.png" alt="" style="display: none;">
+                </div>
+                <div id="B4" class="home">
+                    <img src="./gfx/blue_light.png" alt="" style="display: none;">
+                    <img src="./gfx/blue_dark.png" alt="" style="display: none;">
+                </div>
+            </div>
+
+            <div id="Y">
+                <div id="Y1" class="home">
+                    <img src="./gfx/yellow_light.png" alt="" style="display: none;">
+                    <img src="./gfx/yellow_dark.png" alt="" style="display: none;">
+                </div>
+                <div id="Y2" class="home">
+                    <img src="./gfx/yellow_light.png" alt="" style="display: none;">
+                    <img src="./gfx/yellow_dark.png" alt="" style="display: none;">
+                </div>
+                <div id="Y3" class="home">
+                    <img src="./gfx/yellow_light.png" alt="" style="display: none;">
+                    <img src="./gfx/yellow_dark.png" alt="" style="display: none;">
+                </div>
+                <div id="Y4" class="home">
+                    <img src="./gfx/yellow_light.png" alt="" style="display: none;">
+                    <img src="./gfx/yellow_dark.png" alt="" style="display: none;">
+                </div>
+            </div>
+
+            <div id="G">
+                <div id="G1" class="home">
+                    <img src="./gfx/green_light.png" alt="" style="display: none;">
+                    <img src="./gfx/green_dark.png" alt="" style="display: none;">
+                </div>
+                <div id="G2" class="home">
+                    <img src="./gfx/green_light.png" alt="" style="display: none;">
+                    <img src="./gfx/green_dark.png" alt="" style="display: none;">
+                </div>
+                <div id="G3" class="home">
+                    <img src="./gfx/green_light.png" alt="" style="display: none;">
+                    <img src="./gfx/green_dark.png" alt="" style="display: none;">
+                </div>
+                <div id="G4" class="home">
+                    <img src="./gfx/green_light.png" alt="" style="display: none;">
+                    <img src="./gfx/green_dark.png" alt="" style="display: none;">
+                </div>
+            </div>
+
+            <div id="RH">
+                <div id="RH1" class="base">
+                    <img src="./gfx/red_light.png" alt="" style="display: none;">
+                    <img src="./gfx/red_dark.png" alt="" style="display: none;">
+                </div>
+                <div id="RH2" class="base">
+                    <img src="./gfx/red_light.png" alt="" style="display: none;">
+                    <img src="./gfx/red_dark.png" alt="" style="display: none;">
+                </div>
+                <div id="RH3" class="base">
+                    <img src="./gfx/red_light.png" alt="" style="display: none;">
+                    <img src="./gfx/red_dark.png" alt="" style="display: none;">
+                </div>
+                <div id="RH4" class="base">
+                    <img src="./gfx/red_light.png" alt="" style="display: none;">
+                    <img src="./gfx/red_dark.png" alt="" style="display: none;">
+                </div>
+            </div>
+
+            <div id="BH">
+                <div id="BH1" class="base">
+                    <img src="./gfx/blue_light.png" alt="" style="display: none;">
+                    <img src="./gfx/blue_dark.png" alt="" style="display: none;">
+                </div>
+                <div id="BH2" class="base">
+                    <img src="./gfx/blue_light.png" alt="" style="display: none;">
+                    <img src="./gfx/blue_dark.png" alt="" style="display: none;">
+                </div>
+                <div id="BH3" class="base">
+                    <img src="./gfx/blue_light.png" alt="" style="display: none;">
+                    <img src="./gfx/blue_dark.png" alt="" style="display: none;">
+                </div>
+                <div id="BH4" class="base">
+                    <img src="./gfx/blue_light.png" alt="" style="display: none;">
+                    <img src="./gfx/blue_dark.png" alt="" style="display: none;">
+                </div>
+            </div>
+
+            <div id="YH">
+                <div id="YH1" class="base">
+                    <img src="./gfx/yellow_light.png" alt="" style="display: none;">
+                    <img src="./gfx/yellow_dark.png" alt="" style="display: none;">
+                </div>
+                <div id="YH2" class="base">
+                    <img src="./gfx/yellow_light.png" alt="" style="display: none;">
+                    <img src="./gfx/yellow_dark.png" alt="" style="display: none;">
+                </div>
+                <div id="YH3" class="base">
+                    <img src="./gfx/yellow_light.png" alt="" style="display: none;">
+                    <img src="./gfx/yellow_dark.png" alt="" style="display: none;">
+                </div>
+                <div id="YH4" class="base">
+                    <img src="./gfx/yellow_light.png" alt="" style="display: none;">
+                    <img src="./gfx/yellow_dark.png" alt="" style="display: none;">
+                </div>
+            </div>
+
+            <div id="GH">
+                <div id="GH1" class="base">
+                    <img src="./gfx/green_light.png" alt="" style="display: none;">
+                    <img src="./gfx/green_dark.png" alt="" style="display: none;">
+                </div>
+                <div id="GH2" class="base">
+                    <img src="./gfx/green_light.png" alt="" style="display: none;">
+                    <img src="./gfx/green_dark.png" alt="" style="display: none;">
+                </div>
+                <div id="GH3" class="base">
+                    <img src="./gfx/green_light.png" alt="" style="display: none;">
+                    <img src="./gfx/green_dark.png" alt="" style="display: none;">
+                </div>
+                <div id="GH4" class="base">
+                    <img src="./gfx/green_light.png" alt="" style="display: none;">
+                    <img src="./gfx/green_dark.png" alt="" style="display: none;">
+                </div>
+            </div>
+        </div>
+
+
+        <!------------------------------------ PLANSZA --------------------------------------------------->
+
+
+
+        <div class="tile" id="t1">
+            <!-- <img src="./gfx/red_light.png" alt="" class="gem1">
+            <img src="./gfx/red_light.png" alt="" class="gem2">
+            <img src="./gfx/red_light.png" alt="" class="gem3">
+            <img src="./gfx/red_light.png" alt="" class="gem4"> -->
+        </div>
+        <div class="tile" id="t2"></div>
+        <div class="tile" id="t3"></div>
+        <div class="tile" id="t4"></div>
+        <div class="tile" id="t5"></div>
+        <div class="tile" id="t6"></div>
+        <div class="tile" id="t7"></div>
+        <div class="tile" id="t8"></div>
+        <div class="tile" id="t9"></div>
+        <div class="tile" id="t10"></div>
+        <div class="tile" id="t11"></div>
+        <div class="tile" id="t12"></div>
+        <div class="tile" id="t13"></div>
+        <div class="tile" id="t14"></div>
+        <div class="tile" id="t15"></div>
+        <div class="tile" id="t16"></div>
+        <div class="tile" id="t17"></div>
+        <div class="tile" id="t18"></div>
+        <div class="tile" id="t19"></div>
+        <div class="tile" id="t20"></div>
+        <div class="tile" id="t21"></div>
+        <div class="tile" id="t22"></div>
+        <div class="tile" id="t23"></div>
+        <div class="tile" id="t24"></div>
+        <div class="tile" id="t25"></div>
+        <div class="tile" id="t26"></div>
+        <div class="tile" id="t27"></div>
+        <div class="tile" id="t28"></div>
+        <div class="tile" id="t29"></div>
+        <div class="tile" id="t30"></div>
+        <div class="tile" id="t31"></div>
+        <div class="tile" id="t32"></div>
+        <div class="tile" id="t33"></div>
+        <div class="tile" id="t34"></div>
+        <div class="tile" id="t35"></div>
+        <div class="tile" id="t36"></div>
+        <div class="tile" id="t37"></div>
+        <div class="tile" id="t38"></div>
+        <div class="tile" id="t39"></div>
+        <div class="tile" id="t40"></div>
+
+        <div class="dice_container">
+            <img id="dice_img" src="./gfx/1.png" alt="DICE">
+            <button id="dice">THROW THE DICE</button>
+            <div>
+                <span id="time"></span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

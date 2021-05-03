@@ -1,0 +1,540 @@
+html {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: black;
+}
+
+#gui {
+  width: 700px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.players {
+  padding: 10px;
+  border: 1px black solid;
+  border-radius: 25px;
+  width: auto;
+  height: 25px;
+  margin: 10px;
+  background-color: darkgrey;
+  color: black;
+  text-align: center;
+  font-size: 20px;
+}
+
+#ready {
+  width: 55px;
+  height: 30px;
+}
+
+#label {
+  font-weight: bold;
+  color: white;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin-right: 10px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  -webkit-box-shadow: 0 0 1px #2196F3;
+          box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.game_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.dice_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 20px;
+}
+
+.dice_container button {
+  margin: 10px;
+}
+
+.dice_container button:hover {
+  cursor: pointer;
+}
+
+#time {
+  color: white;
+  font-weight: bold;
+}
+
+#board_container {
+  position: relative;
+  background-image: url(../gfx/board.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 832px;
+  height: 832px;
+}
+
+.home {
+  margin: 0px;
+  width: 64px;
+  height: 64px;
+  position: relative;
+  float: left;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.home:hover {
+  cursor: pointer;
+}
+
+.base {
+  margin: 0px;
+  width: 64px;
+  height: 64px;
+  position: absolute;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.base:hover {
+  cursor: pointer;
+}
+
+.tile {
+  width: 64px;
+  height: 64px;
+  position: absolute;
+  background-repeat: no-repeat;
+}
+
+.tile:hover {
+  cursor: pointer;
+}
+
+#R {
+  top: 64px;
+  left: 64px;
+  position: absolute;
+  width: 128px;
+  height: 128px;
+}
+
+#B {
+  top: 64px;
+  right: 64px;
+  position: absolute;
+  width: 128px;
+  height: 128px;
+}
+
+#Y {
+  bottom: 64px;
+  left: 64px;
+  position: absolute;
+  width: 128px;
+  height: 128px;
+}
+
+#G {
+  bottom: 64px;
+  right: 64px;
+  position: absolute;
+  width: 128px;
+  height: 128px;
+}
+
+#RH1 {
+  top: 383px;
+  left: 128px;
+}
+
+#RH2 {
+  top: 383px;
+  left: 192px;
+}
+
+#RH3 {
+  top: 383px;
+  left: 256px;
+}
+
+#RH4 {
+  top: 383px;
+  left: 320px;
+}
+
+#BH1 {
+  top: 128px;
+  left: 384px;
+}
+
+#BH2 {
+  top: 192px;
+  left: 384px;
+}
+
+#BH3 {
+  top: 256px;
+  left: 384px;
+}
+
+#BH4 {
+  top: 320px;
+  left: 384px;
+}
+
+#GH1 {
+  top: 383px;
+  right: 128px;
+}
+
+#GH2 {
+  top: 383px;
+  right: 192px;
+}
+
+#GH3 {
+  top: 383px;
+  right: 256px;
+}
+
+#GH4 {
+  top: 383px;
+  right: 320px;
+}
+
+#YH1 {
+  bottom: 128px;
+  left: 384px;
+}
+
+#YH2 {
+  bottom: 192px;
+  left: 384px;
+}
+
+#YH3 {
+  bottom: 256px;
+  left: 384px;
+}
+
+#YH4 {
+  bottom: 320px;
+  left: 384px;
+}
+
+.gem1 {
+  position: absolute;
+  top: 12px;
+  left: 24px;
+}
+
+.gem2 {
+  position: absolute;
+  top: 24px;
+  left: 12px;
+}
+
+.gem3 {
+  position: absolute;
+  top: 24px;
+  left: 36px;
+}
+
+.gem4 {
+  position: absolute;
+  top: 36px;
+  left: 24px;
+}
+
+#t1 {
+  top: 328px;
+  left: 72px;
+}
+
+#t2 {
+  top: 328px;
+  left: 136px;
+}
+
+#t3 {
+  top: 328px;
+  left: 200px;
+}
+
+#t4 {
+  top: 328px;
+  left: 264px;
+}
+
+#t5 {
+  top: 328px;
+  left: 328px;
+}
+
+#t6 {
+  top: 264px;
+  left: 328px;
+}
+
+#t7 {
+  top: 200px;
+  left: 328px;
+}
+
+#t8 {
+  top: 136px;
+  left: 328px;
+}
+
+#t9 {
+  top: 72px;
+  left: 328px;
+}
+
+#t10 {
+  top: 72px;
+  left: 392px;
+}
+
+#t11 {
+  top: 72px;
+  left: 456px;
+}
+
+#t12 {
+  top: 136px;
+  left: 456px;
+}
+
+#t13 {
+  top: 200px;
+  left: 456px;
+}
+
+#t14 {
+  top: 264px;
+  left: 456px;
+}
+
+#t15 {
+  top: 328px;
+  left: 456px;
+}
+
+#t16 {
+  top: 328px;
+  left: 520px;
+}
+
+#t17 {
+  top: 328px;
+  left: 584px;
+}
+
+#t18 {
+  top: 328px;
+  left: 648px;
+}
+
+#t19 {
+  top: 328px;
+  left: 712px;
+}
+
+#t20 {
+  top: 392px;
+  left: 712px;
+}
+
+#t21 {
+  top: 456px;
+  left: 712px;
+}
+
+#t22 {
+  top: 456px;
+  left: 648px;
+}
+
+#t23 {
+  top: 456px;
+  left: 584px;
+}
+
+#t24 {
+  top: 456px;
+  left: 520px;
+}
+
+#t25 {
+  top: 456px;
+  left: 456px;
+}
+
+#t26 {
+  top: 520px;
+  left: 456px;
+}
+
+#t27 {
+  top: 584px;
+  left: 456px;
+}
+
+#t28 {
+  top: 648px;
+  left: 456px;
+}
+
+#t29 {
+  top: 712px;
+  left: 456px;
+}
+
+#t30 {
+  top: 712px;
+  left: 392px;
+}
+
+#t31 {
+  top: 712px;
+  left: 328px;
+}
+
+#t32 {
+  top: 648px;
+  left: 328px;
+}
+
+#t33 {
+  top: 584px;
+  left: 328px;
+}
+
+#t34 {
+  top: 520px;
+  left: 328px;
+}
+
+#t35 {
+  top: 456px;
+  left: 328px;
+}
+
+#t36 {
+  top: 456px;
+  left: 264px;
+}
+
+#t37 {
+  top: 456px;
+  left: 200px;
+}
+
+#t38 {
+  top: 456px;
+  left: 136px;
+}
+
+#t39 {
+  top: 456px;
+  left: 72px;
+}
+
+#t40 {
+  top: 392px;
+  left: 72px;
+}
+/*# sourceMappingURL=style.css.map */
