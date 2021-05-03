@@ -33,7 +33,7 @@ class Lobby {
         clearInterval(inter1)
         clearInterval(inter2)
         clearInterval(inter3)
-        window.location.replace("http://localhost:3000/game")
+        window.location.replace("https://chinczyk-dziwuj.herokuapp.com/game")
     }
 
     get() {
