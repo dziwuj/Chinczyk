@@ -10,15 +10,17 @@ export default class Render {
         xhttp.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {
 
+                let data = ""
+                let r_count = 0;
+                let b_count = 0;
+                let y_count = 0;
+                let g_count = 0;
+
                 try {
-                    let data = JSON.parse(this.responseText)
+                    data = JSON.parse(this.responseText)
+                } catch (error) {
 
-                    let r_count = 0;
-                    let b_count = 0;
-                    let y_count = 0;
-                    let g_count = 0;
-
-                } catch (error) { }
+                }
 
                 // console.log({
                 //     p1r: data.p1r, p2r: data.p2r, p3r: data.p3r, p4r: data.p4r,
