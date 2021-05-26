@@ -330,12 +330,17 @@ app.post("/", (req, res) => {
     // console.log(rooms);
 })
 
-app.get("/cheater", (req, res) => {
-    for (let i in rooms) {
-        if (rooms[i].some(e => e.id == req.sessionID) && rooms[i].find(e => e.id == req.sessionID).status != 3)
-            return res.send(JSON.stringify("Wait for your old lobby or go back to main game!"))
-    }
-})
+try {
+    app.get("/cheater", (req, res) => {
+        for (let i in rooms) {
+            if (rooms[i].some(e => e.id == req.sessionID) && rooms[i].find(e => e.id == req.sessionID).status != 3)
+                return res.send(JSON.stringify("Wait for your old lobby or go back to main game!"))
+        }
+    })
+} catch (error) {
+    return res.send(JSON.stringify("🤔"))
+}
+
 
 app.get("/lobby", (req, res) => {
 
