@@ -331,14 +331,14 @@ app.post("/", (req, res) => {
 })
 
 app.get("/cheater", (req, res) => {
-    try {
-        for (let i in rooms) {
-            if (rooms[i].some(e => e.id == req.sessionID) && rooms[i].find(e => e.id == req.sessionID).status != 3)
-                return res.send(JSON.stringify("Wait for your old lobby or go back to main game!"))
-        }
-    } catch (error) {
-        return res.send(JSON.stringify("🤔"))
+
+    for (let i in rooms) {
+        if (rooms[i].some(e => e.id == req.sessionID) && rooms[i].find(e => e.id == req.sessionID).status != 3)
+            return res.send(JSON.stringify("Wait for your old lobby or go back to main game!"))
+        else
+            return res.send(JSON.stringify("🤔"))
     }
+
 })
 
 
